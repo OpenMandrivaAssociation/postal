@@ -8,6 +8,7 @@ URL:		http://www.coker.com.au/postal/
 Source0:	http://www.coker.com.au/postal/%{name}-%{version}.tar.bz2
 BuildRequires:	openssl-devel
 BuildRequires:	libstdc++-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 This program starts a specified number of processes to send as much random data
