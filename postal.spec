@@ -1,11 +1,11 @@
 Summary:	SMTP and POP benchmark program
 Name:		postal
-Version:	0.62
-Release:	%mkrel 9
+Version:	0.70
+Release:	%mkrel 1
 Group:		Networking/Mail
-License:	GPL
-URL:		http://www.coker.com.au/postal/
-Source0:	http://www.coker.com.au/postal/%{name}-%{version}.tar.bz2
+License:	GPLv3
+URL:		http://doc.coker.com.au/projects/postal/
+Source0:	http://www.coker.com.au/postal/%{name}-%{version}.tgz
 BuildRequires:	openssl-devel
 BuildRequires:	libstdc++-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
@@ -29,12 +29,7 @@ if someone uses it unethically then it will be easy to filter via procmail.
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
-install -d %{buildroot}%{_sbindir}
-install -d %{buildroot}%{_mandir}/man8
-install -m755 postal %{buildroot}%{_sbindir}/
-install -m755 postal-list %{buildroot}%{_sbindir}/
-install -m755 rabid %{buildroot}%{_sbindir}/
-install -m644 *.8 %{buildroot}%{_mandir}/man8/
+%makeinstall_std
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
@@ -42,6 +37,7 @@ install -m644 *.8 %{buildroot}%{_mandir}/man8/
 %files
 %defattr(-,root,root)
 %doc debian/changelog credits.txt
+%{_bindir}/*
 %{_sbindir}/*
 %{_mandir}/man*/*
 
