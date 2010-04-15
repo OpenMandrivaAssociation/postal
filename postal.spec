@@ -6,8 +6,7 @@ Group:		Networking/Mail
 License:	GPLv3
 URL:		http://doc.coker.com.au/projects/postal/
 Source0:	http://www.coker.com.au/postal/%{name}-%{version}.tgz
-BuildRequires:	openssl-devel
-BuildRequires:	libstdc++-devel
+BuildRequires:	gnutls-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
@@ -22,6 +21,8 @@ if someone uses it unethically then it will be easy to filter via procmail.
 %build
 
 %configure2_5x \
+    --disable-openssl \
+    --disable-static \
     --disable-stripping
 
 %make 
