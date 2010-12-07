@@ -1,7 +1,7 @@
 Summary:	SMTP and POP benchmark program
 Name:		postal
 Version:	0.70
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		Networking/Mail
 License:	GPLv3
 URL:		http://doc.coker.com.au/projects/postal/
