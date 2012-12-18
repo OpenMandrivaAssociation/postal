@@ -7,6 +7,7 @@ License:	GPLv3
 URL:		http://doc.coker.com.au/projects/postal/
 Source0:	http://www.coker.com.au/postal/%{name}-%{version}.tgz
 BuildRequires:	pkgconfig(gnutls)
+BuildRequires:	pkgconfig(libgcrypt)
 
 %description
 This program starts a specified number of processes to send as much random data
