@@ -4,7 +4,7 @@ Version:	0.72
 Release:	2
 Group:		Networking/Mail
 License:	GPLv3
-URL:		http://doc.coker.com.au/projects/postal/
+URL:		https://doc.coker.com.au/projects/postal/
 Source0:	http://www.coker.com.au/postal/%{name}-%{version}.tgz
 BuildRequires:	pkgconfig(gnutls)
 BuildRequires:	pkgconfig(libgcrypt)
