@@ -6,6 +6,11 @@ Group:		Networking/Mail
 License:	GPLv3
 URL:		https://doc.coker.com.au/projects/postal/
 Source0:	http://www.coker.com.au/postal/%{name}-%{version}.tgz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(gnutls)
 BuildRequires:	pkgconfig(libgcrypt)
 
